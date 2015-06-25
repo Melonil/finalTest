@@ -85,23 +85,23 @@ namespace FinalTest.Tests
         }
 
 
-        //[Test]
-        //public void RécupérerLePremierNombreDontLeTexteContientPlusDe5CaractèresBis()
-        //{
-        //    var nombres = new Nombres(otherKeyValuePairs);
-        //    var premierNombreDontLeTexteContientPlusDe5Caractères = nombres.PremierNombreDontLeTexteContientPlusDe5Caractères;  // meme propriété
+        [Test]
+        public void RécupérerLePremierNombreDontLeTexteContientPlusDe5CaractèresBis()
+        {
+            var nombres = new Nombres(otherKeyValuePairs);
+            var premierNombreDontLeTexteContientPlusDe5Caractères = nombres.PremierNombreDontLeTexteContientPlusDe5Caractères;  // meme propriété
 
-        //    Check.That(premierNombreDontLeTexteContientPlusDe5Caractères).IsEqualTo("dix-sept");
-        //}
+            Check.That(premierNombreDontLeTexteContientPlusDe5Caractères).IsEqualTo("dix-sept");
+        }
 
-        //[Test]
-        //public void RécupérerLes4NombresSupérieursA3()
-        //{
-        //    var nombres = new Nombres(keyValuePairs);
-        //    var quatreNombresSupérieursSuivant3 = nombres.QuatreNombresSupérieursSuivant3; // retourne un IEnumerable<int> en utilisant Linq (i.e sans utiliser de boucles) -> OrderBy + Skip + Take
+        [Test]
+        public void RécupérerLes4NombresSupérieursA3()
+        {
+            var nombres = new Nombres(keyValuePairs);
+            var quatreNombresSupérieursSuivant3 = nombres.QuatreNombresSupérieursSuivant3; // retourne un IEnumerable<int> en utilisant Linq (i.e sans utiliser de boucles) -> OrderBy + Skip + Take
 
-        //    Check.That(quatreNombresSupérieursSuivant3).ContainsExactly(4, 5, 6, 7);
-        //}
+            Check.That(quatreNombresSupérieursSuivant3).ContainsExactly(4, 5, 6, 7);
+        }
 
         //[Test]
         //public void RécupérerLes4NombresSupérieursA3Bis()

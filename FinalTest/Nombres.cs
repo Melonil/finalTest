@@ -36,9 +36,16 @@ namespace FinalTest
         {
             get
             {
-                var query = nombresPairs.Where(x => (x.Key.Length > 5)).Select(x => x.Key).First(); 
-                return query;
+                return nombresPairs.Where(x => (x.Key.Length > 5)).Select(x => x.Key).First(); 
             }  
+        }
+
+        public IEnumerable<int> QuatreNombresSupérieursSuivant3
+        {
+            get
+            {
+                return nombresPairs.Where(x => x.Value >3).OrderBy(x => x.Value).Select(x => x.Value).Skip(0).Take(4);
+            }
         }
     }
 }

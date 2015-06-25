@@ -13,15 +13,15 @@ namespace FinalTest.Tests
             Check.That(true).IsTrue();
         }
 
-        //[Test]
-        //public void DéfinirUnTypeValeur()
-        //{
-        //    var valeur1 = new TypeValeur(12);
-        //    var valeur2 = new TypeValeur(12);
+        [Test]
+        public void DéfinirUnTypeValeur()
+        {
+            var valeur1 = new TypeValeur(12);
+            var valeur2 = new TypeValeur(12);
 
-        //    Check.That(valeur1).IsEqualTo(valeur2);
-        //    Check.That(typeof(TypeValeur).IsValueType).IsTrue();
-        //}
+            Check.That(valeur1).IsEqualTo(valeur2);
+            Check.That(typeof(TypeValeur).IsValueType).IsTrue();
+        }
 
         //[Test]
         //public void DéfinirUnTypeRéférenceAvecEgalitéDeuxInstancesAyantLesMêmesPropriétés()
@@ -68,4 +68,5 @@ namespace FinalTest.Tests
         //    Check.That(resultatSomme).IsEqualTo(3);
         //}
     }
+
 }

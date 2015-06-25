@@ -5,7 +5,7 @@ namespace FinalTest
     public struct DépotRéalisé : IEvenementMetier
     {
         private readonly string _numéroDeCompte;
-        private readonly Montant _montantDepot;
+        internal readonly Montant _montantDepot;
         private readonly DateTime _dateDepot;
 
         public DépotRéalisé(string numéroDeCompte, Montant montantDepot, DateTime dateDepot)

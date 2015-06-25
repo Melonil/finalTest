@@ -30,16 +30,16 @@ namespace FinalTest.Tests
             Check.That(evenements).ContainsExactly(new DépotRéalisé(_numéroDeCompte, montantDepot, dateDepot));
         }
 
-        //[Test]
-        //public void EtantDonnéUnCompteBancaireFaireUnRetraitAvecProvisionSuffisanteProduitUnEvenement()
-        //{
-        //    var compteBancaire = new CompteBancaire(new CompteCréé(_numéroDeCompte, 0), new DépotRéalisé(_numéroDeCompte, new Montant(100), DateTime.Now)); // Event Sourcing avec une liste d'événements (params IEvénementMétier>[])
-        //    var montantRetrait = new Montant(10);
-        //    var dateRetrait = DateTime.Now;
-        //    var evenements = compteBancaire.FaireUnRetrait(montantRetrait, dateRetrait); // retourne un IEnumerable<IEvénémentMétier> contenant l'événement RetraitRealisé
+        [Test]
+        public void EtantDonnéUnCompteBancaireFaireUnRetraitAvecProvisionSuffisanteProduitUnEvenement()
+        {
+            var compteBancaire = new CompteBancaire(new CompteCréé(_numéroDeCompte, 0), new DépotRéalisé(_numéroDeCompte, new Montant(100), DateTime.Now)); // Event Sourcing avec une liste d'événements (params IEvénementMétier>[])
+            var montantRetrait = new Montant(10);
+            var dateRetrait = DateTime.Now;
+            var evenements = compteBancaire.FaireUnRetrait(montantRetrait, dateRetrait); // retourne un IEnumerable<IEvénémentMétier> contenant l'événement RetraitRealisé
 
-        //    Check.That(evenements).ContainsExactly(new RetraitRéalisé(_numéroDeCompte, montantRetrait, dateRetrait));
-        //}
+            Check.That(evenements).ContainsExactly(new RetraitRéalisé(_numéroDeCompte, montantRetrait, dateRetrait));
+        }
 
         //[Test]
         //public void EtantDonnéUnCompteBancaireNonApprovisionnéFaireUnRetraitSansDépasserSonAutorisationDeCreditSuffisanteProduitDeuxEvenements()
@@ -49,7 +49,7 @@ namespace FinalTest.Tests
         //    var dateRetrait = DateTime.Now;
         //    var evenements = compteBancaire.FaireUnRetrait(montantRetrait, dateRetrait); // retourne un IEnumerable<IEvénémentMétier> contenant l'événement RetraitRealisé
 
-        //    Check.That(evenements).ContainsExactly<IEvénementMétier>(new RetraitRéalisé(_numéroDeCompte, montantRetrait, dateRetrait), new BalanceNégativeDétectée(_numéroDeCompte, new Montant(5), dateRetrait));
+        //    Check.That(evenements).ContainsExactly<IEvenementMetier>(new RetraitRéalisé(_numéroDeCompte, montantRetrait, dateRetrait), new BalanceNégativeDétectée(_numéroDeCompte, new Montant(5), dateRetrait));
         //}
 
         //[Test]

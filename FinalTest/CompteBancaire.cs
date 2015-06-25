@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FinalTest;
 
 namespace FinalTest
 {
@@ -15,6 +16,11 @@ namespace FinalTest
         public static IEnumerable<IEvenementMetier> Ouvrir(string numéroDeCompte, int autorisationDeCrédit)
         {
             yield return new CompteCréé(numéroDeCompte, autorisationDeCrédit);
+        }
+
+        public IEnumerable<IEvenementMetier> FaireUnDepot(Montant montantDepot, DateTime dateDepot)
+        {
+            yield return new DépotRéalisé(this._compteCréé._numéroDeCompte, montantDepot, dateDepot);
         }
     }
 }

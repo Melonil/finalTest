@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FinalTest.Tests
 {
-    public class TypeValeur
+    public struct TypeValeur
     {
         private int valeur;
         public TypeValeur(int i)

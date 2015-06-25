@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FinalTest.Tests
+namespace FinalTest
 {
     public class TypeReference
     {
